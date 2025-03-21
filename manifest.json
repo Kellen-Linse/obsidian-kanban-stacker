@@ -1,0 +1,11 @@
+{
+	"id": "kanban-stacker",
+	"name": "Kanban Stacker",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Aggregates tasks from multiple Kanban boards into one main board.",
+	"author": "Kellen Linse",
+	"authorUrl": "www.kellenlinse.com",
+	"fundingUrl": "",
+	"isDesktopOnly": false
+}
