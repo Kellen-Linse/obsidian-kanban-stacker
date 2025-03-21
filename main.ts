@@ -8,12 +8,10 @@ export default class KanbanSyncPlugin extends Plugin {
 		console.log("Kanban Sync Plugin loaded.");
 		this.syncKanbans();
 
-		this.app.workspace.on("active-leaf-change", async () => {
-			const activeFile = this.app.workspace.getActiveFile();
+		this.app.workspace.on("file-open", async (file) => {
 			if (
-				activeFile &&
-				activeFile.path ===
-					`${this.folderPath}/${this.mainKanbanFileName}`
+				file &&
+				file.path === `${this.folderPath}/${this.mainKanbanFileName}`
 			) {
 				await this.syncKanbans();
 			}
